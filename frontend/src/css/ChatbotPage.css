@@ -1,0 +1,266 @@
+/* ChatbotPage.css */
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+
+.chatbot-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'SUSE', sans-serif;
+  background: #e5ddd5;
+  color: #333;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  color: white;
+}
+
+.header .logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+}
+
+.header .chatbot-name {
+  font-size: 1.9em;
+  font-weight: bold;
+  color: #333;
+}
+
+.chatbot-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  overflow-y: auto;
+  background: #fbfaf900;
+}
+
+/* Custom Scrollbar Styling */
+.chatbot-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.chatbot-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+  border: 2px solid #d9d8d7;
+}
+
+.chatbot-container::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.chatbot-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* Scrollbar for Firefox */
+.chatbot-container {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+/* Scrollbar Styling for Chat Messages */
+.chat-messages::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.chat-messages {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
+
+.message {
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 15px;
+  max-width: 70%;
+  line-height: 1.4;
+  font-size: 0.95em;
+  display: inline-block;
+  position: relative;
+}
+
+.message.user {
+  background: #dd8ef8;
+  align-self: flex-end;
+  border-bottom-right-radius: 0;
+}
+
+.message.bot {
+  background: #ffffff;
+  align-self: flex-start;
+  border-bottom-left-radius: 0;
+}
+
+.message-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.message-image {
+  margin-top: 10px;
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.timestamp {
+  font-size: 0.7em;
+  color: #888;
+  margin-top: 5px;
+  display: block;
+  text-align: right;
+}
+
+/* FAQ Cards Section */
+.content-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+}
+
+.faq-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.faq-card {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: box-shadow 0.2s ease;
+}
+
+.faq-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.faq-question {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.faq-image {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* Footer (Search Input and Send Button) */
+.footer {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  margin-right: 10px;
+  box-shadow: none;
+  background: #f0f0f0;
+  padding-left: 15px;
+}
+
+.send-button {
+  padding: 10px 20px;
+  border-radius: 10%;
+  border: none;
+  background: #dd8ef8;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.send-button:hover {
+  background: #20c05b;
+}
+
+.send-button:active {
+  background: #1bab4f;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header .chatbot-name {
+    font-size: 2.1em;
+    color: #333;
+  }
+
+  .chatbot-container {
+    padding: 10px;
+  }
+
+  .message {
+    font-size: 0.9em;
+  }
+
+  .footer {
+    padding: 10px;
+  }
+
+  .search-input {
+    margin-bottom: 10px;
+  }
+
+  .send-button {
+    width: 20%;
+  }
+}
+
+@media (max-width: 480px) {
+  .header .chatbot-name {
+    font-size: 1em;
+  }
+
+  .chatbot-container {
+    padding: 8px;
+  }
+
+  .message {
+    font-size: 0.8em;
+  }
+}
