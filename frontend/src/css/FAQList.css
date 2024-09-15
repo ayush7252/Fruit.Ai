@@ -19,8 +19,7 @@
     padding-right: 220px;
     width: 50%;
     /* padding-left:-90px; */
-    flex-direction: row;
-    
+    flex-direction: row;  
 }
 
 /* Header */
@@ -216,6 +215,14 @@ h2 {
         font-size: 12px;
         margin-top: 5vh;
         margin-bottom: 3vh; /* Ensure button stays visible */
+    }
+
+    .faq-list1{
+        display: flex;
+        padding-left: 220px;
+        width: 50%;
+        /* padding-left:-90px; */
+        flex-direction: row;  
     }
 
     h2 {

@@ -4,7 +4,7 @@ import '../css/ChatbotPage.css';
 import chatbot from "../assets/ChatBot.png";
 
 // Base URL for the API
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = 'https://fruit-ai-eygb.onrender.com/api';
 
 // Utility function to format the time
 const formatTime = (timestamp) => {
@@ -109,11 +109,11 @@ const handleSearch = async () => {
                     <p className="answer">{msg.details}</p>
                     {msg.image && (
                       <img
-                        src={`http://localhost:5000/${msg.image}`} // Add base URL for images
+                        src={`https://fruit-ai-eygb.onrender.com/${msg.image}`} // Add base URL for images
                         alt="Detail"
                         className="message-image"
                         onError={(e) => {
-                          e.target.src = 'http://localhost:5000/uploads/default-image.jpg'; // Fallback image
+                          e.target.src = 'https://fruit-ai-eygb.onrender.com/uploads/default-image.jpg'; // Fallback image
                         }}
                       />
                     )}
@@ -135,11 +135,11 @@ const handleSearch = async () => {
                   <p className="faq-question">{faq.question}</p>
                   {faq.imageUrl && (
                     <img
-                      src={`http://localhost:5000/${faq.imageUrl}`} // Add base URL for images
+                      src={`https://fruit-ai-eygb.onrender.com/${faq.imageUrl}`} // Add base URL for images
                       alt={faq.question}
                       className="faq-image"
                       onError={(e) => {
-                        e.target.src = 'http://localhost:5000/uploads/default-image.jpg'; // Fallback image
+                        e.target.src = 'https://fruit-ai-eygb.onrender.com/uploads/default-image.jpg'; // Fallback image
                       }}
                     />
                   )}
