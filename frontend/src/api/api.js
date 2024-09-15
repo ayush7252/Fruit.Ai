@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Define API URL
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://fruit-ai-eygb.onrender.com/api';
 
 export const createFAQ = (formData) => {
   return axios.post(`${API_URL}/faqs`, formData, {
